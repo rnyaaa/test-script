@@ -116,6 +116,7 @@
         }`;
 
         function setup() {
+          console.log("Canvas created"); // Log to verify canvas creation
           createCanvas(800, 800, WEBGL);
           myShader = createShader(vert, frag);
         }
