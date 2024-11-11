@@ -117,7 +117,7 @@
 
         function setup() {
           console.log("Canvas created"); // Log to verify canvas creation
-          createCanvas(800, 800, WEBGL);
+          createCanvas(windowWidth, windowHeight, WEBGL);
           myShader = createShader(vert, frag);
         }
 
@@ -131,3 +131,6 @@
 
           rect(-width, -height, width*2, height*2);
         }
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);  // This ensures the canvas resizes when the window size changes
+}
